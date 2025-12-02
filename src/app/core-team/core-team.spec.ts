@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CoreTeam } from './core-team';
 
 describe('CoreTeam', () => {

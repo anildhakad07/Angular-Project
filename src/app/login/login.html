@@ -1,0 +1,55 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Login</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <!-- Email -->
+      <div
+        class="form-group"
+        [class.invalid]="userName?.touched && userName?.invalid"
+      >
+        <label>Email</label>
+        <input
+          type="email"
+          formControlName="userName"
+          placeholder="Enter your email"
+        />
+        <small *ngIf="userName?.touched && userName?.errors?.['required']"
+          >Email is required.</small
+        >
+        <small *ngIf="userName?.touched && userName?.errors?.['email']">
+          Enter a valid email.
+        </small>
+      </div>
+
+      <!-- Password -->
+      <div
+        class="form-group"
+        [class.invalid]="password?.touched && password?.invalid"
+      >
+        <label>Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="Enter your password"
+        />
+        <small *ngIf="password?.touched && password?.errors?.['required']"
+          >Password is required.</small
+        >
+        <small *ngIf="password?.touched && password?.errors?.['minlength']"
+          >Minimum 6 characters required.</small
+        >
+      </div>
+
+      <!-- Forgot Password link above the button -->
+      <div class="forgot-link">
+        <a routerLink="/forgot-password">Forgot Password?</a>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="loading">
+        {{ loading ? 'Logging in...' : 'Login' }}
+      </button>
+    </form>
+  </div>
+</div>

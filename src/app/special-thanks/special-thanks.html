@@ -1,1 +1,37 @@
-<p>special-thanks works!</p>
+<div class="thanks-container">
+  <header class="thanks-header" data-aos="fade-down">
+    <h1>Special Thanks</h1>
+    <p>We gratefully acknowledge the following contributors.</p>
+  </header>
+
+  <section class="thanks-intro" data-aos="fade-right">
+    <h2>Why We Thank Them</h2>
+    <p>
+      Our journey would not have been possible without the guidance, support,
+      and creativity of many amazing individuals.
+    </p>
+  </section>
+
+  <section class="thanks-categories" data-aos="fade-left">
+    <h2>Contributions by Categories</h2>
+    <ul>
+      <li><strong>Mentorship & Guidance:</strong> Helping us navigate challenges.</li>
+      <li><strong>Technical Support:</strong> Providing critical expertise.</li>
+      <li><strong>Creative Inspiration:</strong> Bringing innovation and ideas.</li>
+      <li><strong>Project Review:</strong> Ensuring quality and improvements.</li>
+    </ul>
+  </section>
+
+  <section class="thanks-list">
+    <div class="thanks-card" *ngFor="let person of thanksList" data-aos="zoom-in">
+      <h2>{{ person.name }}</h2>
+      <p>{{ person.contribution }}</p>
+    </div>
+  </section>
+
+  <section class="thanks-quotes" data-aos="fade-up">
+    <h2>Words of Gratitude</h2>
+    <blockquote>"Alone we can do so little; together we can do so much." – Helen Keller</blockquote>
+    <blockquote>"Gratitude turns what we have into enough and more." – Melody Beattie</blockquote>
+  </section>
+</div>

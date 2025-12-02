@@ -1,0 +1,216 @@
+/* ============ GLOBAL RESET ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f5f9;
+}
+
+/* ============ LAYOUT WRAPPER ============ */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ============ SIDEBAR (Same as Home Page) ============ */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #1e1e2f;
+  color: #fff;
+  padding: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4fc3f7;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.side-nav a {
+  text-decoration: none;
+  color: #d9d9d9;
+  font-size: 18px;
+  padding: 12px 10px;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.side-nav a:hover {
+  background: #34344a;
+  color: #fff;
+}
+
+/* ============ MAIN CONTENT AREA ============ */
+.main-content {
+  margin-left: 250px;
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f5f9;
+  transition: 0.3s ease;
+}
+
+/* ============ TOP NAVBAR ============ */
+.top-navbar {
+  height: 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ============ PAGE CONTENT ============ */
+.thanks-container {
+  padding: 40px;
+}
+
+/* ===== HEADER SECTION ===== */
+.thanks-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.thanks-header h1 {
+  font-size: 36px;
+  color: #1e1e2f;
+}
+
+.thanks-header p {
+  font-size: 17px;
+  color: #555;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+/* ===== INTRO SECTION ===== */
+.thanks-intro {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 35px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.thanks-intro h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* ===== CATEGORIES SECTION ===== */
+.thanks-categories {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 35px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.thanks-categories h2 {
+  margin-bottom: 15px;
+}
+
+.thanks-categories ul {
+  list-style: none;
+}
+
+.thanks-categories li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+.thanks-categories li:last-child {
+  border-bottom: none;
+}
+
+/* ===== THANKS CARD GRID ===== */
+.thanks-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.thanks-card {
+  background: #fff;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.thanks-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== QUOTES SECTION ===== */
+.thanks-quotes {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.thanks-quotes h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.thanks-quotes blockquote {
+  background: #fff;
+  padding: 18px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-left: 5px solid #1e1e2f;
+  font-size: 18px;
+  font-style: italic;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -260px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
